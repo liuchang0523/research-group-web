@@ -9,6 +9,11 @@ title: People
   {% for item in site.data.people %}
     {% assign person = item[1] %}
     {% if person.role == role.key %}
+      <dt>
+        {% if person.img %}
+          <img class="img-circle" src="{{ person.img }}" width="100" alt="此处应有头像" />
+        {% endif %}
+      </dt>
       <dt class="person">
         {% if person.webpage %}
         <a href="{{ person.webpage |escape }}">
